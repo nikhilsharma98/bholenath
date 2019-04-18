@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index', 'pagesController@index'); 
+Route::get('/about', 'pagesController@about');
+Route::get('/services', 'pagesController@services');
+Route::get('/contact', 'pagesController@contact');
+
+Route::resource('posts', 'PostsController'); 
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
